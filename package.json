@@ -1,0 +1,42 @@
+{
+  "name": "object-to-dom",
+  "version": "1.0.0",
+  "description": "Generate html from object",
+  "main": "dist/index.js",
+  "engines": {
+    "node": "v16.9.1",
+    "vscode": "^1.22.0",
+    "npm": "^7.21.1"
+  },
+  "scripts": {
+    "test": "echo \"no test\";",
+    "build": "tsc",
+    "copy": "copyfiles -f ./public/**/* ./dist/public & copyfiles -f ./views/**/* ./dist/views",
+    "prestart": "npm run build & npm run copy",
+    "start": "node ./dist/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lambou/object-to-dom.git"
+  },
+  "keywords": [
+    "dom",
+    "object",
+    "html"
+  ],
+  "author": "Arnold LAMBOU",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lambou/object-to-dom/issues"
+  },
+  "homepage": "https://github.com/lambou/object-to-dom#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jsdom": "^16.2.13",
+    "@types/node": "^16.11.0",
+    "copyfiles": "^2.4.1",
+    "express": "^4.17.1",
+    "jsdom": "^18.0.0",
+    "typescript": "^4.4.4"
+  }
+}
