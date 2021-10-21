@@ -1,12 +1,3 @@
-export default class DomJson<
-  ROOT_TYPE extends keyof HTMLElementTagNameMap = "div"
-> {
-  root: DomJsonNode<ROOT_TYPE>;
-  constructor(root: DomJsonNode<ROOT_TYPE>) {
-    this.root = root;
-  }
-}
-
 export interface IDomJsoncontext<ElementType = HTMLElement> {
   element: ElementType;
   childWithId: <T = HTMLElement>(
